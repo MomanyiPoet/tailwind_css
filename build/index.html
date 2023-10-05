@@ -1,30 +1,174 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tailwind CSS</title>
+
+    <!-- FAVICONS -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+
     <link rel="stylesheet" href="./style.css">
 </head>
-<body class="min-h-screen bg-slate-50 dark:bg-gray-950 dark:text-white">
+<body class="min-h-screen bg-darky font-fugaz">
     <!-- HEADER -->
-    <header class="bg-teal-700 text-white sticky top-0 z-10">
+    <header id="header" class="bg-transparent blur-bg text-white shadow-2xl sticky top-0 z-10">
         <section class="p-4 flex justify-between items-center xl:max-w-7xl lg:max-w-4xl md:max-w-3xl mx-auto">
-            <h1 class="text-xl font-medium"><a href="#hero"><span class="text-2xl">🚀</span> Outer Space</a></h1>
+            <h1 class="text-lg font-extralight uppercase hover:scale-105"><a href="#hero"><span class="text-2xl">🚀</span> Outer Space</a></h1>
             <div>
                 <button id="mobile-open-button" class="text-3xl md:hidden focus:outline-none">&#9776</button>
-                <nav class="hidden md:block text-xl space-x-8" aria-label="main">
-                    <a href="#rockets">Rockets</a>
-                    <a href="#testimonials">Testimonials</a>
-                    <a href="#contact">Contact Us</a>
+                <nav class="hidden md:block text-lg font-extralight" aria-label="main">
+                    <ul class="flex space-x-8">
+                        <li><a href="#rockets" class="hover:text-primary">Rockets</a></li>
+                        <li><a href="#testimonials" class="hover:text-primary">Testimonials</a></li>
+                        <li><a href="#contact" class="hover:text-primary">Contact Us</a></li>
+                    </ul>
                 </nav>
             </div>
         </section>
     </header>
 
     <!-- MAIN CONTENT -->
-    <main>
-        <section></section>
+    <main id="main" class="max-w-6xl mx-auto">
+        <section id="hero" class="sm:mt-20 pt-20 px-6 flex flex-col-reverse md:flex-row justify-center items-center gap-8 scroll-mt-20">
+            <article class="lg:w-1/2">
+                <h3 class="text-white md:text-6xl text-4xl md:text-left text-center">We Boldly Go <br> <span class="text-primary">Where No Rocket</span> <br> Has Gone Before</h3>
+                <p class="my-4 text-whity text-lg max-w-lg md:text-left text-center">
+                    We're building rockets for the next century today. 
+                    From the moon to Mars, Jupiter and beyond... <br>
+                    Enjoy Outer Space.
+                </p>
+            </article>
+            <img src="./images/rocketdab.png" class="sm:w-1/3 w-10/12" alt="rocket image">
+        </section>
+
+        <section id="rockets" class="sm:mt-20 p-6 scroll-mt-20">
+            <hr class="w-1/2 mx-auto mb-12">
+            <h3 class="text-white md:text-4xl text-3xl text-center">Our Rockets</h3>
+            <ul class="list-none my-12 mx-auto flex sm:flex-row flex-col items-center gap-8">
+                <li class="py-4 sm:w-5/6 w-80 flex flex-col items-center border border-solid border-primary rounded-3xl shadow-2xl bg-secondary hover:scale-105">
+                    <img src="./images/rocketman.png" class="w-1/2 m-6" alt="explorer">
+                    <h3 class="text-2xl text-center text-white">Explorer</h3>
+                    <p class="hidden sm:block text-1xl text-center mt-2 text-white">$</p>
+                    <p class="sm:hidden text-1xl text-center mt-2 text-white">Affordable Exploration</p>
+                </li>
+
+                <li class="py-4 sm:w-5/6 w-80 flex flex-col items-center border border-solid border-primary rounded-3xl shadow-2xl bg-secondary hover:scale-105">
+                    <img src="./images/rocketride.png" class="w-1/2 m-6" alt="adventurer">
+                    <h3 class="text-2xl text-center text-white">Adventurer</h3>
+                    <p class="hidden sm:block text-1xl text-center mt-2 text-white">$$</p>
+                    <p class="sm:hidden text-1xl text-center mt-2 text-white">Best Selling Rocket</p>
+                </li>
+
+                <li class="py-4 sm:w-5/6 w-80 flex flex-col items-center border border-solid border-primary rounded-3xl shadow-2xl bg-secondary hover:scale-105">
+                    <img src="./images/rocketlaunch.png" class="w-1/2 m-6" alt="infinity">
+                    <h3 class="text-2xl text-center text-white">Infinity</h3>
+                    <p class="hidden sm:block text-1xl text-center mt-2 text-white">$$$</p>
+                    <p class="sm:hidden text-1xl text-center mt-2 text-white">Luxury Starship</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="testimonials" class="sm:mt-20 pt-20 px-6 scroll-mt-11">
+            <hr class="w-1/2 mx-auto mb-12">
+            <h3 class="text-white md:text-4xl text-3xl text-center">Testimonials</h3>
+
+            <figure class="my-12">
+                <blockquote class="bg-secondary rounded-3xl relative pl-14 pr-8 py-12">
+                    <p class="text-xl text-white before:content-['\201C'] before:font-fugaz before:absolute 
+                        before:top-2 before:left-0 before:text-6xl before:text-white before:opacity-25 
+                        before:transform before:translate-x-2 before:translate-y-2 
+                        after:content-['\201D'] after:font-fugaz after:absolute after:-bottom-8
+                        after:right-0 after:text-6xl after:text-white after:opacity-25 
+                        after:transform after:-translate-x-2 after:-translate-y-2">
+                        Their Explorer rocket arrived in a wooden crate as expected.
+                        Life-long customer! A++ shopping experience.
+                    </p>
+                </blockquote>
+                <figcaption class="italic text-right mt-2 text-primary">
+                    &#8212;Wile E. Coyote, Genius
+                </figcaption>
+            </figure>
+
+            <figure class="my-12">
+                <blockquote class="bg-secondary rounded-3xl relative pl-14 pr-8 py-12">
+                    <p class="text-xl text-white before:content-['\201C'] before:font-fugaz before:absolute 
+                        before:top-2 before:left-0 before:text-6xl before:text-white before:opacity-25 
+                        before:transform before:translate-x-2 before:translate-y-2 
+                        after:content-['\201D'] after:font-fugaz after:absolute after:-bottom-8
+                        after:right-0 after:text-6xl after:text-white after:opacity-25 
+                        after:transform after:-translate-x-2 after:-translate-y-2">
+                        I knew I not only wanted &#8212; <span class="italic">I needed</span> &#8212; Acme's Infinity
+                        Rocket for my mission in space. Acme delivered in one day! Nothing says <q class="italic">Take me 
+                        to your leader</q> like Acme's Infinity Rocket! 💯
+                    </p>
+                </blockquote>
+                <figcaption class="italic text-right mt-2 text-primary">
+                    &#8212;Buzz Lightyear
+                </figcaption>
+            </figure>
+
+            <figure class="my-12">
+                <blockquote class="bg-secondary rounded-3xl relative pl-14 pr-8 py-12">
+                    <p class="text-xl text-white before:content-['\201C'] before:font-fugaz before:absolute 
+                        before:top-2 before:left-0 before:text-6xl before:text-white before:opacity-25 
+                        before:transform before:translate-x-2 before:translate-y-2 
+                        after:content-['\201D'] after:font-fugaz after:absolute after:-bottom-8
+                        after:right-0 after:text-6xl after:text-white after:opacity-25 
+                        after:transform after:-translate-x-2 after:-translate-y-2">
+                        The Acme Adventurer Rocket has thwarted my Illudium Q-36 Explosive Space Modulator on several
+                        occassions. <span class="italic">This makes me very, very angry!</span> Nevertheless, K-9
+                        and I have awarded Acme the Martian contract for space exploration rockets based 
+                        on Acme's quality and sturdy designs.
+                    </p>
+                </blockquote>
+                <figcaption class="italic text-right mt-2 text-primary">
+                    &#8212;Marvin The Martian &amp; K-9
+                </figcaption>
+            </figure>
+        </section>
+
+        <section id="contact" class="sm:mt-20 pt-20 mb-6 px-6">
+            <hr class="w-1/2 mx-auto mb-12">
+            <h3 class="text-white md:text-4xl text-3xl text-center">Contact Us</h3>
+
+            <form action="" class="max-w-4xl mx-auto text-lg text-white sm:text-xl">
+                <div class="flex flex-col items-left gap-3">
+                    <label for="subject">Email</label>
+                    <input type="email" id="email" name="email"
+                    placeholder="You can reach me on..." required class="w-full text-black p-3 rounded-xl border border-solid">
+
+                    <label for="message">Message:</label>
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="I would like to say that..." required class="w-full text-black p-3 rounded-xl border border-solid"></textarea>
+                </div>
+
+                <div class="text-right my-3">
+                    <button class="bg-secondary hover:bg-primary text-white p-3 w-48 rounded-xl border border-solid">Submit</button>
+                </div>
+            </form>
+        </section>
     </main>
+    
+    <footer id="footer" class="bg-secondary text-white text-sm mt-20">
+        <section class="p-4">
+            <div class="flex flex-col sm:flex-row sm:justify-evenly">
+                <address>
+                    <h2>Outer Space-Powered Products, Inc.</h2>
+                    Nairobi, Kenya<br>
+                    Email: <a href="#">Inquires@outerspace.com</a><br>
+                    Phone: <a href="#">(+254) 700-013-897</a>
+                </address>
+                <nav class="hidden md:flex flex-col gap-2" aria-label="footer">
+                    <a href="#rockets" class="hover:text-primary">Our Rockets</a>
+                    <a href="#testimonials" class="hover:text-primary">Testimonials</a>
+                    <a href="#contact" class="hover:text-primary">Contact Us</a>
+                </nav>
+            </div>
+
+            <div class="my-4">
+                <p class="text-center">Copyright &copy; <span id="year">2022</span> All Rights Reserved</p>
+            </div>
+        </section>
+    </footer>
 </body>
 </html>

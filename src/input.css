@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Poppins&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Blur background */
+.blur-bg {
+    backdrop-filter: blur(15px);
+}
